@@ -1,0 +1,7 @@
+ds2431.c	- changed prototype because of new compiler version.
+awarecon#92.c	- inserted rssi-module (goes back to #089b.c).
+		- changed prototype because of new compiler version.
+rssi.c
+rssi.h
+rtc.c		- changed prototype because of new compiler version.
+ack.c		- changed prototype because of new compiler version.

@@ -1,0 +1,9 @@
+#include "config/NEUTRAL"
+
+#define HazardousGoods_CHEMICAL 4
+
+#define HazardousGoods_MIN_TEMP 0
+#define HazardousGoods_MAX_TEMP 28 
+
+#define HazardousGoods_STORAGE_LIMIT 0 
+#define HazardousGoods_MAX_UNKNOWN_LOCATION 0

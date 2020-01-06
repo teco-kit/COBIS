@@ -1,0 +1,39 @@
+PROJECT=IRBeacon
+
+FMT_OUT=
+#CFLAGS+=+GDEFAULT_WAKE_LENGTH=3200 +GDEFAULT_DUTYCYCLE_LENGTH=4800
+#BOARD=pc210
+#SYNC=y
+ifdef SYNC
+MODE=SYNC_BEACON
+CFLAGS+=+GSYNC_BEACON="1"
+endif
+
+ID?=12
+MODE?=NOSYNC_BEACON
+
+BOARD?=pc232
+
+TARGET_SUFFIX=_$(BOARD)_$(MODE)$(ID)
+TARGET=$(PROJECT)$(TARGET_SUFFIX)
+
+build:$(TARGET).hex
+
+PBS=../ParticleBaseSystem
+
+DEFINES=ID BOARD
+
+include $(PBS)/Mk/ccsc.mk
+
+install:$(TARGET).hex
+
+%$(TARGET_SUFFIX).c:%.c
+	@printf '$(foreach D,$(DEFINES),#define $(D) $(value $(D))\n)#IGNORE_WARNINGS %s\n#include "%s"\n' "$(IGNORE_WARNINGS)" $< >$(@)
+
+.PRECIOUS: %$(TAGET_SUFFIX).c
+
+
+all: 
+	$(MAKE) $(MAKE_ARGS) ID=11 
+	$(MAKE) $(MAKE_ARGS) ID=22
+	$(MAKE) $(MAKE_ARGS) ID=33

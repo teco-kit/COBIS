@@ -1,0 +1,6 @@
+#include "config/OIL_TYPE_A"
+#define HazardousGoods_CHEMICAL 1
+#define HazardousGoods_MIN_TEMP 0
+#define HazardousGoods_MAX_TEMP 40 
+#define HazardousGoods_STORAGE_LIMIT 100
+#define HazardousGoods_MAX_UNKNOWN_LOCATION 0

@@ -1,0 +1,6 @@
+#include "config/NONE"
+#define HazardousGoods_CHEMICAL 0
+#define HazardousGoods_MIN_TEMP -100
+#define HazardousGoods_MAX_TEMP 100 
+#define HazardousGoods_STORAGE_LIMIT 0
+#define HazardousGoods_MAX_UNKNOWN_LOCATION 0

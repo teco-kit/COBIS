@@ -1,0 +1,8 @@
+- IR byte received
+	- short blink CateyeClipLEDs
+
+- CPU on
+	- LEDBlue on
+
+- Sleep - Hibernate
+	- LEDRed on

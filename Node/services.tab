@@ -1,0 +1,7 @@
+/* Service Configuration File */
+
+SVC(Network)    //has to be the first one
+SVC(Location)
+SVC(Sensor)
+SVC(Monitoring)
+SVC(HazardousGoods)

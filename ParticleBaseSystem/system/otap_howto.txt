@@ -1,0 +1,8 @@
+to produce a new otap loader:
+compile the otap_loader.c;
+
+convert it with the hex to rom file and name it flash_loader.rom
+
+ 
+then find the jump to the high area (should be a goto at 0000)
+place that address in the otap_defs.h, also the uppper, higher lower subbytes (see otap_defs)
